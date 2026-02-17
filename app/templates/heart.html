@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% block content %}
+
+<section class="prediction">
+    <div class="glass-card">
+        <h2>Heart Attack Prediction</h2>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        <form method="POST">
+            <input type="number" name="age" placeholder="Age" required>
+            <select name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
+            <input type="number" name="impulse" placeholder="Impulse" step="any" required>
+            <input type="number" name="glucose" placeholder="Glucose" step="any" required>
+            <input type="number" name="kcm" placeholder="KCM" step="any" required>
+            <input type="number" name="troponin" placeholder="Troponin" step="any" required>
+            <input type="number" name="pulse_pressure" placeholder="Pulse Pressure" step="any" required>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result-box">
+            <p>Prediction: {{ prediction }}</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+{% endblock %}

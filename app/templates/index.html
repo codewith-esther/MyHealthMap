@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+
+<section class="hero">
+    <h1>Welcome to MyHealthMap</h1>
+    <p>Predict Obesity & Heart Attack Risk with Advanced AI Models</p>
+    <div class="hero-buttons">
+        <a href="{{ url_for('obesity.obesity') }}" class="cta-btn">Obesity Model</a>
+        <a href="{{ url_for('heart.heart') }}" class="cta-btn">Heart Model</a>
+    </div>
+</section>
+
+<section class="model-cards">
+    <div class="card">
+        <div class="icon">⚖️</div>
+        <h3>Obesity Model</h3>
+        <p>Analyze BMI, weight, age & lifestyle factors to predict obesity risk.</p>
+        <a href="{{ url_for('obesity.obesity') }}" class="card-btn">Predict Now</a>
+    </div>
+
+    <div class="card">
+        <div class="icon">❤️</div>
+        <h3>Heart Attack Model</h3>
+        <p>Predict cardiovascular risk using clinical data like troponin, glucose, and pulse pressure.</p>
+        <a href="{{ url_for('heart.heart') }}" class="card-btn">Predict Now</a>
+    </div>
+</section>
+
+{% endblock %}
