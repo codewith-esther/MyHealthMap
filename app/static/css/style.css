@@ -644,3 +644,124 @@ footer {
 .card .icon {
     animation: float 4.5s ease-in-out infinite;
 }
+
+
+/* ===============================
+   LARGE LAPTOPS (1200px and down)
+=================================*/
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 28px;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+
+/* ===============================
+   TABLETS (1024px and down)
+=================================*/
+
+@media (max-width: 1024px) {
+    .model-cards {
+        justify-content: center;
+    }
+    .card {
+        width: 100%;
+        max-width: 380px;
+    }
+    .glass-card {
+        max-width: 100%;
+    }
+    form {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* ===============================
+   SMALL TABLETS (768px and down)
+=================================*/
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero h1 {
+        font-size: 1.85rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+    form {
+        grid-template-columns: 1fr;
+    }
+    button {
+        width: 100%;
+    }
+}
+
+
+/* ===============================
+   MOBILE PHONES (640px and down)
+=================================*/
+
+@media (max-width: 640px) {
+    .container {
+        padding: 0 16px;
+    }
+    .card {
+        max-width: 100%;
+        padding: 18px;
+    }
+    .glass-card {
+        padding: 20px 16px;
+    }
+    nav a {
+        font-size: 0.85rem;
+        padding: 6px 8px;
+    }
+}
+
+
+/* ===============================
+   SMALL MOBILE (480px and down)
+=================================*/
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+    .cta-btn {
+        padding: 9px 16px;
+        font-size: 0.85rem;
+    }
+    input,
+    select,
+    button {
+        font-size: 0.85rem;
+    }
+}
+
+
+/* ===============================
+   VERY SMALL DEVICES (360px and down)
+=================================*/
+
+@media (max-width: 360px) {
+    .logo {
+        font-size: 0.8rem;
+    }
+    nav a {
+        font-size: 0.75rem;
+    }
+    .hero h1 {
+        font-size: 1.25rem;
+    }
+}
