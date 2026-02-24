@@ -35,7 +35,8 @@
 
 html,
 body {
-    height: 100%;
+    height: auto;
+    min-height: 100vh;
 }
 
 body {
@@ -108,7 +109,7 @@ nav a:hover {
 
 .hero {
     text-align: center;
-    padding: 84px 0 36px;
+    padding: 48px 0 32px;
 }
 
 .hero h1 {
@@ -156,7 +157,7 @@ nav a:hover {
     gap: 26px;
     justify-content: center;
     align-items: flex-start;
-    padding: 40px 0 70px;
+    padding: 32px 0 60px;
     flex-wrap: wrap;
 }
 
@@ -217,7 +218,7 @@ nav a:hover {
 .prediction {
     display: flex;
     justify-content: center;
-    padding: 28px 0 70px;
+    padding: 20px 0 60px;
 }
 
 .glass-card {
@@ -344,70 +345,284 @@ footer {
     font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
+
+/* Tablet & Medium Screens */
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 24px;
+    }
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.1rem;
+    }
+    .card {
+        width: 100%;
+        max-width: 380px;
+    }
+    .model-cards {
+        gap: 20px;
+        padding: 28px 0 50px;
     }
     .glass-card {
         max-width: 100%;
-        padding: 22px;
-    }
-    form {
-        grid-template-columns: 1fr;
-    }
-    .card {
-        width: 100%;
-        max-width: 360px;
-    }
-    .model-cards {
-        padding: 20px;
-        gap: 16px;
-    }
-    .hero {
-        padding: 60px 0 28px;
-    }
-    nav {
-        padding: 12px 16px;
+        padding: 26px;
     }
 }
 
-@media (max-width: 900px) {
-    .hero h1 {
-        font-size: 1.9rem;
-    }
-    form {
-        grid-template-columns: 1fr;
-    }
-    .card {
-        width: 100%;
-        max-width: 420px;
-    }
-    .model-cards {
-        padding: 22px;
-        gap: 18px;
-    }
-    .hero {
-        padding: 56px 0 24px;
-    }
-}
 
-@media (max-width: 480px) {
+/* Small Tablets & Large Phones */
+
+@media (max-width: 768px) {
     nav {
         padding: 12px 16px;
     }
     .logo {
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
-    .glass-card {
-        padding: 18px;
+    .nav-links {
+        gap: 10px;
     }
-    input,
-    select {
-        padding: 10px;
+    nav a {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+    .hero {
+        padding: 40px 0 24px;
+    }
+    .hero h1 {
+        font-size: 1.85rem;
+        margin-bottom: 10px;
+    }
+    .hero p {
+        font-size: 0.98rem;
+        margin-bottom: 18px;
+    }
+    .hero-buttons {
+        gap: 12px;
     }
     .cta-btn {
-        padding: 10px 16px;
+        padding: 11px 22px;
         font-size: 0.95rem;
+    }
+    form {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .card {
+        width: 100%;
+        max-width: 340px;
+        padding: 22px;
+    }
+    .card h3 {
+        font-size: 1rem;
+    }
+    .card p {
+        font-size: 0.9rem;
+    }
+    .card-btn {
+        padding: 9px 18px;
+        font-size: 0.9rem;
+    }
+    .model-cards {
+        padding: 24px 0 40px;
+        gap: 14px;
+    }
+    .glass-card {
+        padding: 22px 20px;
+        border-radius: 16px;
+    }
+    .glass-card h2 {
+        font-size: 1.25rem;
+    }
+    input[type="number"],
+    select {
+        padding: 11px 12px;
+        font-size: 0.95rem;
+    }
+    button {
+        padding: 11px 14px;
+        font-size: 0.95rem;
+    }
+    footer {
+        padding: 20px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Mobile Phones */
+
+@media (max-width: 640px) {
+    .container {
+        padding: 0 16px;
+    }
+    nav {
+        padding: 11px 14px;
+        gap: 8px;
+    }
+    .logo {
+        font-size: 0.95rem;
+        letter-spacing: 0.4px;
+    }
+    .nav-links {
+        gap: 6px;
+    }
+    nav a {
+        padding: 5px 8px;
+        font-size: 0.85rem;
+        border-radius: 8px;
+    }
+    .hero {
+        padding: 36px 0 20px;
+    }
+    .hero h1 {
+        font-size: 1.6rem;
+        margin-bottom: 6px;
+    }
+    .hero p {
+        font-size: 0.95rem;
+        margin-bottom: 16px;
+    }
+    .cta-btn {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+        border-radius: 999px;
+    }
+    .cta-btn:hover {
+        transform: translateY(-2px);
+    }
+    form {
+        gap: 10px;
+    }
+    .card {
+        width: 100%;
+        max-width: 100%;
+        padding: 18px;
+        border-radius: 14px;
+    }
+    .card .icon {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+    .card h3 {
+        font-size: 0.95rem;
+        margin: 6px 0;
+    }
+    .card p {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+    .card-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+    .model-cards {
+        padding: 20px 0 32px;
+        gap: 12px;
+    }
+    .glass-card {
+        padding: 18px 16px;
+        border-radius: 14px;
+    }
+    .glass-card h2 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    input[type="number"],
+    select {
+        padding: 10px 10px;
+        font-size: 0.9rem;
+        border-radius: 8px;
+    }
+    input::placeholder {
+        font-size: 0.85rem;
+    }
+    button {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        border-radius: 10px;
+    }
+    button:hover {
+        transform: translateY(-2px);
+    }
+    .result-box {
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    .error {
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    footer {
+        padding: 18px 14px;
+        font-size: 0.85rem;
+        margin-top: 24px;
+    }
+}
+
+
+/* Extra Small Mobile Phones */
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+    nav {
+        padding: 10px 12px;
+    }
+    .logo {
+        font-size: 0.9rem;
+    }
+    nav a {
+        padding: 4px 6px;
+        font-size: 0.8rem;
+        border-radius: 6px;
+    }
+    .hero {
+        padding: 32px 0 18px;
+    }
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+    .cta-btn {
+        padding: 9px 16px;
+        font-size: 0.85rem;
+    }
+    .card {
+        padding: 16px;
+    }
+    .card .icon {
+        font-size: 1.8rem;
+    }
+    .card h3 {
+        font-size: 0.9rem;
+    }
+    .card p {
+        font-size: 0.8rem;
+    }
+    .model-cards {
+        padding: 20px 0 32px;
+        gap: 10px;
+    }
+    .glass-card {
+        padding: 16px 14px;
+    }
+    .glass-card h2 {
+        font-size: 1rem;
+    }
+    input[type="number"],
+    select {
+        padding: 9px 8px;
+        font-size: 0.85rem;
+    }
+    button {
+        padding: 9px 10px;
+        font-size: 0.85rem;
     }
 }
 

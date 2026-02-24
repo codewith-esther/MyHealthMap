@@ -1,30 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>M</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyHealthMap - AI Health Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 </head>
 
 <body>
-
     <nav>
         <h2 class="logo">MyHealthMap</h2>
         <div class="nav-links">
             <a href="{{ url_for('home') }}">Home</a>
             <a href="{{ url_for('obesity.obesity') }}">Obesity Model</a>
             <a href="{{ url_for('heart.heart') }}">Heart Model</a>
-
         </div>
     </nav>
 
     {% block content %}{% endblock %}
 
-    <footer>
-        © 2026 BrownHealth AI — Premium ML Platform
-    </footer>
-
+    <footer>© 2026 BrownHealth AI — Premium ML Platform</footer>
 </body>
 
 </html>

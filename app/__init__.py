@@ -1,7 +1,16 @@
 from flask import Flask, render_template
+import os
 
 def create_app():
-    app = Flask(__name__)
+    # Get the absolute path to the app directory
+    app_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    app = Flask(
+        __name__,
+        template_folder=os.path.join(app_dir, 'templates'),
+        static_folder=os.path.join(app_dir, 'static'),
+        static_url_path='/static'
+    )
 
     # Import Blueprints
     from app.routes.obesity import obesity_bp
